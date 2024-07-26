@@ -35,6 +35,7 @@ public class Animal {
     private String breed;
 
     @NotNull
+    @Enumerated(EnumType.ORDINAL)
     @Column(name = "animal_gender")
     private GENDER gender;
 
