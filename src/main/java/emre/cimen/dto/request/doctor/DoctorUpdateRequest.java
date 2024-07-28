@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class DoctorUpdateRequest {
-    @Positive(message = "ID must be poesitive")
+    @Positive(message = "ID must be positive")
     @NotNull(message = "Please enter id")
     private int id;
 

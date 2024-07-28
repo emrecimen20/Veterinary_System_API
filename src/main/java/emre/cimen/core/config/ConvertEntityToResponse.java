@@ -13,6 +13,8 @@ import java.util.stream.Collectors;
 @Configuration
 public class ConvertEntityToResponse<E, RESPONSE> {
     private final IModelMapperService modelMapperService;
+
+    // In order not to keep retyping, I used this method to convert the List type entity to response list type.
     public List<RESPONSE> convertToResponseList(List<E> entityList, Class<RESPONSE> responseClass) {
         if (entityList.isEmpty()){
             throw new NotFoundException(Msg.NOT_FOUND);
